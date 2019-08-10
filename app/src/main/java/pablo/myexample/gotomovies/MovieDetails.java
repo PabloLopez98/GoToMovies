@@ -39,7 +39,7 @@ import java.util.ArrayList;
 
 public class MovieDetails extends AppCompatActivity {
 
-    private String API_KEY = "";
+    private String API_KEY = "9c71ca7fce2ff4e8b2f139326ba80518";
     private SavedMovieViewModel savedMovieViewModel;
     private String id, poster_path;
     private FloatingActionButton favButton;

@@ -37,7 +37,7 @@ public class Frag1 extends Fragment implements RecyclerViewAdapter.OnMovieListen
 
     private static String BASE_URL = "https://api.themoviedb.org";
     private static int PAGE = 1;
-    private static String API_KEY = "";
+    private static String API_KEY = "9c71ca7fce2ff4e8b2f139326ba80518";
     private static String LANGUAGE = "en-US";
     private static String CATEGORY = "popular";
     private static String POSTER_PATH_BASE = "http://image.tmdb.org/t/p/w185/";

@@ -17,16 +17,32 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import java.util.List;
 
 import pablo.myexample.gotomovies.ui.main.SectionsPagerAdapter;
 
+
+/*
+  <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="?actionBarSize"
+                android:padding="@dimen/appbar_padding"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimary"
+                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                />
+ */
 public class MainActivity extends AppCompatActivity {
 
     private SavedMovieViewModel savedMovieViewModel;
@@ -35,14 +51,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Window window = this.getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.setStatusBarColor(this.getResources().getColor(R.color.colorAccent));
         }
-
         savedMovieViewModel = ViewModelProviders.of(this).get(SavedMovieViewModel.class);
 
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
@@ -54,6 +68,20 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent toAttributin = new Intent(this, Attribution.class);
+        startActivity(toAttributin);
+        return true;
     }
 
     @Override

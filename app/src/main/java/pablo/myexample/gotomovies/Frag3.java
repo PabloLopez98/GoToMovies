@@ -26,7 +26,7 @@ public class Frag3 extends Fragment implements RecyclerViewAdapter.OnMovieListen
 
     private ArrayList<Movie> arrayList;
     private SavedMovieViewModel savedMovieViewModel;
-    private static String API_KEY = "";
+    private static String API_KEY = "9c71ca7fce2ff4e8b2f139326ba80518";
 
     @Nullable
     @Override
