@@ -29,20 +29,6 @@ import java.util.List;
 
 import pablo.myexample.gotomovies.ui.main.SectionsPagerAdapter;
 
-
-/*
-  <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:minHeight="?actionBarSize"
-                android:padding="@dimen/appbar_padding"
-                android:text="@string/app_name"
-                android:textColor="@color/colorPrimary"
-                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-                />
- */
 public class MainActivity extends AppCompatActivity {
 
     private SavedMovieViewModel savedMovieViewModel;

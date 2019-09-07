@@ -40,7 +40,7 @@
                     android:id="@+id/aa_thumbnail"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
-                    android:background="@drawable/lionking" />
+                    android:background="@color/colorAccent" />
 
                 <LinearLayout
                     android:layout_width="100dp"

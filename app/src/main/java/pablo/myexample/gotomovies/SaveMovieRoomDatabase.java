@@ -47,7 +47,7 @@ public abstract class SaveMovieRoomDatabase extends RoomDatabase {
         if (INSTANCE == null) {
             synchronized (SaveMovieRoomDatabase.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), SaveMovieRoomDatabase.class, "saved__movie_table").addCallback(sRoomDatabaseCallback).allowMainThreadQueries().build();
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), SaveMovieRoomDatabase.class, "saved__movie_table").allowMainThreadQueries().build();// before allowmainthreadqueries() //.addCallback(sRoomDatabaseCallback)
                 }
             }
         } return INSTANCE;
