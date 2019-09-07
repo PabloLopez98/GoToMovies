@@ -34,8 +34,7 @@ public abstract class SaveMovieRoomDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(final Void... params) {
-            savedMovieDao.deleteAll();
-
+            //savedMovieDao.deleteAll();
             //SavedMovie savedMovie = new SavedMovie(384018, "6.7", "http://image.tmdb.org/t/p/w185//keym7MPn1icW1wWfzMnW3HeuzWU.jpg");
             //savedMovieDao.insert(savedMovie);
 
